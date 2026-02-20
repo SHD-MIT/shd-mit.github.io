@@ -1,0 +1,72 @@
+{"0": {
+    "doc": "Home",
+    "title": "Secure Hardware Design",
+    "content": "MIT’s Secure Hardware Design Class (6.5950/6.5951) is an open-source course that teaches students both how to attack modern CPUs and design architectures resilient to those attacks. Students gain hands-on experience hacking real processors and are taught various state-of-the-art hardware attacks and defenses. This course is the culmination of multiple years of work. Browse our story here. ",
+    "url": "/home/#secure-hardware-design",
+    
+    "relUrl": "/#secure-hardware-design"
+  },"1": {
+    "doc": "Home",
+    "title": "Meet the Team",
+    "content": "Secure Hardware Design is the culmination of years of effort by a team of students. Say “hello” to the people behind it! . ",
+    "url": "/home/#meet-the-team",
+    
+    "relUrl": "/#meet-the-team"
+  },"2": {
+    "doc": "Home",
+    "title": "Think, Play, Do.",
+    "content": "Our course philosophy involves three pillars- Think, Play, Do.‍ . ",
+    "url": "/home/#think-play-do",
+    
+    "relUrl": "/#think-play-do"
+  },"3": {
+    "doc": "Home",
+    "title": "Think",
+    "content": "In Lecture, we encourage students to think critically about hardware security as a part of greater systems. Our lectures are designed to guide critical thinking and engagement with the research literature. | Topic | Lecture Materials | . | Microarchitectural Attacks | - [Side channels introduction 🔨](http://csg.csail.mit.edu/6.S983/slides/L02.pdf) \\ | . |   | - [Cache side channel deep dive 🔨](http://csg.csail.mit.edu/6.S983/slides/L03.pdf) \\ | . |   | - [Transient execution attacks (Spectre, Meltdown)](http://csg.csail.mit.edu/6.S983/slides/L04.pdf) \\ | . |   | - [Side channel defenses](http://csg.csail.mit.edu/6.S983/slides/L05.pdf) | . | Physical security | - [Hardware Security Modules (HSM)](http://csg.csail.mit.edu/6.S983/slides/L06.pdf) \\ | . |   | - [Physical Attacks (Power analysis, EM, fault injection) 🔨](http://csg.csail.mit.edu/6.S983/slides/L07.pdf) \\ | . |   | - [Rowhammer](http://csg.csail.mit.edu/6.S983/slides/L08.pdf) | . | Hardware support for software security | - [Trusted Execution Environment (TEE)](http://csg.csail.mit.edu/6.S983/slides/L09.pdf) \\ | . |   | - [Memory safety mechanisms 🔨](http://csg.csail.mit.edu/6.S983/slides/L10.pdf) | . | Tools for security assurance | - [Fuzzing, formal verification 🔨](http://csg.csail.mit.edu/6.S983/slides/L11.pdf) | . The 🔨 icon means this lecture features an in-class demo. Please send requests for powerpoint files to Mengjia. ",
+    "url": "/home/#think",
+    
+    "relUrl": "/#think"
+  },"4": {
+    "doc": "Home",
+    "title": "Play",
+    "content": "In Recitation, we encourage students to play with the course materials through interactive hands-on games. Our recitations consist of interactive learning sessions, leveraging the Capture-the-Flag (CTF) format for friendly competitions amongst students. Students team up and work with their peers to conquer various challenges together.‍ . | Topic | Content | Format | . | C/C++ Recitation | A brief refresher on C/ C++ syntax and useful features. | CTF | . | Cache Attack Recitation | A visual overview of prime+probe on a custom RISC-V CPU. | Group Learning | . | Physical Attacks Recitation | Students work together to implement a timing side channel against real microcontrollers. | CTF | . | RISC-V System Programming Recitation | Overview of the privileged ISA specification for RISC-V with emphasis on exception handling and interrupt conditions. | CTF | . | Formal Verification Recitation | Students learn the basics of formal verification techniques. | Group Learning | . ",
+    "url": "/home/#play",
+    
+    "relUrl": "/#play"
+  },"5": {
+    "doc": "Home",
+    "title": "Do",
+    "content": "In Labs, students have a chance to actually put the concepts from class to work. The attack labs involve implementing attacks taught in class on real hardware. No simulators, no trickery, no nonsense. Real implementations on real hardware.‍ . “How can I use your materials in my class?” . Every year, we update our course to reflect the ever-changing landscape of research in the hardware security world. All of these labs are open-source and free to use. Just shoot us an email at hw-sec-lab-dev at mit dot edu before doing so, so we can give you the instructor’s solutions and starter gradebook. If you do use our materials in your class, make sure to attribute us on your class webpage. | Lab| | Difficulty | Setup |   | . | [Cache Side Channels](http://csg.csail.mit.edu/6.S983/labs/) | ![1cache](1cache_simple.png){: width=\"200\" } | Hard | x86_64 Linux server. Some tuning required. We use Cascade Lake. | . | [Spectre](http://csg.csail.mit.edu/6.S983/labs/) | ![2spectre](2spectre_simple.png){: width=\"200\" } | Medium | x86_64 Linux server. | . | [Website Fingerprinting](http://csg.csail.mit.edu/6.S983/labs/) | ![3web](3website_simple.png){: width=\"200\" } | Easy | Any modern web browser (Chrome, Firefox, Safari). | . | [Rowhammer](http://csg.csail.mit.edu/6.S983/labs/) | ![4rowhammer](4rowhammer_simple.png){: width=\"200\" } | Hard | x86_64 Linux server. Some tuning to match your hardware required. | . | [ASLR Bypasses](http://csg.csail.mit.edu/6.S983/labs/) | ![5aslrbypass](5aslr_simple.png){: width=\"200\" } | Easy | x86_64 Linux server. | . | [CPU Fuzzing](http://csg.csail.mit.edu/6.S983/labs/) | ![6fuzzing](6fuzz_simple.png){: width=\"200\" } | Medium | x86_64 Linux server. | . Cache Side Channels (Dead Drop) . Students start with building primitives to measure cache access latencies and examine microarchitecture details. Next, they will implement Prime+Probe on a modern cache hierarchy, requiring a thorough understanding of cache geometry. Finally, they implement a covert channel chat client, demonstrating mastery over creating contention on set associative structures. Spectre . Students implement a Flush+Reload attack against shared memory between userspace and kernelspace. Then, they extend their attack to work under speculation in increasingly difficult exploitation scenarios to leak kernel memory back to userspace. Website Fingerprinting . We start with teaching students to implement a cache occupancy attack using Javascript to profile different websites. Next, the students are guided to use machine learning to distinguish these websites based on their traces collected using JavaScripts. Finally, we ask the students to slightly change the attack and think about the root causes of the attack. Rowhammer . Students learn the essential steps towards implementing Rowhammer in the wild. We guide the students to go through the two level address translation: virtual address -&gt; physical address -&gt; DRAM location. The students are first given the physical address of vulnerable rows and hammer rows and they will quickly see bit flips in the wild. Then the students are asked to reverse engineering some missing pieces of DRAM banking functions to search for unknown vulnerable rows. ASLR Bypasses . Students defeat ASLR using a variety of attacks including using both OS and microarchitectural side channels. Then, they implement a code reuse attack (ROP) using the leaked ASLR slide. CPU Fuzzing . This is our capstone open-ended design project. Students are tasked with discovering bugs in a real CPU RTL design by implementing system software and creating a custom instruction fuzzer. They are free to implement this fuzzer however they’d like, so long as it can capture processor exceptions and discover backdoors automatically. ",
+    "url": "/home/#do",
+    
+    "relUrl": "/#do"
+  },"6": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/home/",
+    
+    "relUrl": "/"
+  },"7": {
+    "doc": "Story",
+    "title": "Our Story",
+    "content": "Secure Hardware Design was created by Mengjia Yan with the mission to teach the next generation of computer architects how to design great processors. Here’s a look back at how we’ve been thinking, playing, and doing for the past few years. Fall 2020 . We launched SHD as a seminar course during the pandemic. | **Lecture** | Six lectures focused on side channels and Trusted Execution Environments (TEEs). | . | **Lab** | Students completed a cache attack lab and an open-ended final project. One of the projects led to the publication of the [Bigger Fish](https://jackcook.github.io/bigger-fish/) paper. | . | **Paper Discussion** | The first offering of the course focused on teaching students read research papers, and thus was heavy on paper discussions. | . Spring 2022 . Driven by the great passion of Joseph Ravichandran, significant updates have been implemented in this iteration, making it a popular and lab-rich course. The status of the course was captured in a SigArch Blog post. | **Lecture** | Eleven lectures covering a wider range of topics including side channel attacks, physical attacks, Rowhammer, and CPU fuzzing. | . | **Recitation** | We introduced hands-on hacking recitations this year, running four capture-the-flag (CTF) sessions. We gave out several FTDI UART adapters and microcontrollers as prizes, and ran two pizza parties. | . | **Lab** | We had a full-fledge hardware security lab suits, consisting of five exciting lab assignments on hacking real processors, including the new kernel Spectre attack lab, website fingerprinting lab, Rowhammer lab, and ASLR bypass lab. One of these labs inspired the discovery of the [EntryBleed](https://www.willsroot.io/2022/12/entrybleed.html) attack (HASP’23 Best Paper Award). | . | **Paper Discussion** | The discussion sessions were streamlined with each one strategically scheduled after the corresponding lecture to reinforce the foundational knowledge covered. For a detailed schedule, please refer to the [calendar](http://csg.csail.mit.edu/6.888Yan/cal/). | . Spring 2023 . We stablized course content and polished the lab organziations. Meanwhile, we started receiving multiple requests around the world to use our course materials. | **Lecture** | We introduced multiple in-class demos. | . | **Recitation** | Two new recitation sessions are introduced: one on RISCV system programming and the other on formal evaluation of Register Transfer Level (RTL) code. | . | **Lab** | We introduced a new capstone design project where students design end-to-end fuzzers on a custom RISCV chip for detecting hidden instructions. | . | **Paper Discussion** | We further reduced the number of paper discussion sessions to emphasize its supplementary role. | . Spring 2024 . SHD is listed as a TQE course at MIT starting from this offering. | **Lecture** | We added a new lecture on formal verification for hardware security. | . | **Lab** | A new lab assignment was added to guide the students to use the Yosys-Rosette toolchain to detect hardware bugs. The difficulty level is ‘‘easy’’. The difficulty level of the Rowhammer lab is also reduced. | . Spring 2025 . We are constantly working diligently to make Secure Hardware Design better than ever. Here’s where we’re going with it for this year and beyond. | **Lab** | A new lab assignment will be added to guide the students to debug C code and test students’ basic C knowledge. Mid-checkpoints will be added to several labs with heavier workload to guide the students to plan ahead and start early. Furthermore, we will slightly increase the difficulty level of 50% of the labs. | . | **Paper Discussion** | The grading policy for paper discussions will be revised to emphasize and reward thorough preparation and the use of effective visualizations that enhance the class’s understanding. | . ",
+    "url": "/home/story.html#our-story",
+    
+    "relUrl": "/story.html#our-story"
+  },"8": {
+    "doc": "Story",
+    "title": "Acknowledgements",
+    "content": "This course stands as an outcome of the combined efforts of many passionate students. | Joseph crafted three of the six lab assignments that have challenged and intrigued our students, from the kernel Spectre attack lab to the ASLR bypassing lab and the ingenious hardware fuzzing lab. He also designed a lecture on physical attacks that featured three captivating in-person attack demonstrations. Moreover, Joseph created all the eye-catching flyers and advertisement materials. | Peter and Miguel designed the Rowhammer lab, challenging students to delve deep into the intricate world of hardware vulnerabilities. | Yuheng took the lead in designing the hardware formal verification recitation session. Building on that success, Yuheng is now expanding it into a full-fledged lab. | Jack designed the website fingerprinting lab. This lab serves as a delightful warm-up for the course, and it imparts a thought-provoking lesson about the challenges of uncovering the root causes of side channels within complex systems. | Our very first TA, Miles, added the CTF component to the cache lab. | . ",
+    "url": "/home/story.html#acknowledgements",
+    
+    "relUrl": "/story.html#acknowledgements"
+  },"9": {
+    "doc": "Story",
+    "title": "Story",
+    "content": " ",
+    "url": "/home/story.html",
+    
+    "relUrl": "/story.html"
+  }
+}
